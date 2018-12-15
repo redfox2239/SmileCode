@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,6 +13,10 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="smileCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kge-Nh-iGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gy0-7z-uDB"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +72,7 @@
                                                                 <constraint firstAttribute="height" constant="2" id="zFB-kS-aRC"/>
                                                             </constraints>
                                                         </view>
-                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9645" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-yg-dxz" userLabel="goalImageView">
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plug" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-yg-dxz" userLabel="goalImageView">
                                                             <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
                                                         </imageView>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-EQ-0jV">
@@ -282,25 +285,24 @@
                         <constraints>
                             <constraint firstItem="EJn-ns-3Sv" firstAttribute="leading" secondItem="4TW-9L-W9K" secondAttribute="trailing" id="1Ez-rO-3m5"/>
                             <constraint firstItem="2Jb-eZ-NqH" firstAttribute="top" secondItem="KK7-PB-e12" secondAttribute="bottom" id="41m-Cu-LSu"/>
-                            <constraint firstItem="4TW-9L-W9K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7hF-0E-IJc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EJn-ns-3Sv" secondAttribute="bottom" id="8GL-2t-boS"/>
+                            <constraint firstItem="4TW-9L-W9K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7hF-0E-IJc"/>
+                            <constraint firstItem="Gy0-7z-uDB" firstAttribute="top" secondItem="EJn-ns-3Sv" secondAttribute="bottom" id="8GL-2t-boS"/>
                             <constraint firstItem="KK7-PB-e12" firstAttribute="leading" secondItem="V6u-AT-lRR" secondAttribute="trailing" id="8Yf-jk-dv8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2Jb-eZ-NqH" secondAttribute="trailing" id="JT3-7h-ocP"/>
+                            <constraint firstAttribute="trailing" secondItem="2Jb-eZ-NqH" secondAttribute="trailing" id="JT3-7h-ocP"/>
                             <constraint firstItem="KK7-PB-e12" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="Kw8-pN-XxN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4TW-9L-W9K" secondAttribute="bottom" id="S7J-VS-O5u"/>
+                            <constraint firstItem="Gy0-7z-uDB" firstAttribute="top" secondItem="4TW-9L-W9K" secondAttribute="bottom" id="S7J-VS-O5u"/>
                             <constraint firstItem="2Jb-eZ-NqH" firstAttribute="leading" secondItem="V6u-AT-lRR" secondAttribute="trailing" id="V0T-Ky-gSp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EJn-ns-3Sv" secondAttribute="trailing" id="VO3-b3-QX9"/>
+                            <constraint firstAttribute="trailing" secondItem="EJn-ns-3Sv" secondAttribute="trailing" id="VO3-b3-QX9"/>
                             <constraint firstItem="V6u-AT-lRR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="W5O-L9-HZF"/>
-                            <constraint firstItem="V6u-AT-lRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XD4-yk-TnP"/>
+                            <constraint firstItem="V6u-AT-lRR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XD4-yk-TnP"/>
                             <constraint firstItem="4TW-9L-W9K" firstAttribute="top" secondItem="V6u-AT-lRR" secondAttribute="bottom" id="XDl-4j-hos"/>
                             <constraint firstItem="2Jb-eZ-NqH" firstAttribute="bottom" secondItem="V6u-AT-lRR" secondAttribute="bottom" id="XcW-kM-4kE"/>
                             <constraint firstItem="4TW-9L-W9K" firstAttribute="trailing" secondItem="V6u-AT-lRR" secondAttribute="trailing" id="clc-v9-ybF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KK7-PB-e12" secondAttribute="trailing" id="e8P-9p-0TF"/>
+                            <constraint firstAttribute="trailing" secondItem="KK7-PB-e12" secondAttribute="trailing" id="e8P-9p-0TF"/>
                             <constraint firstItem="KK7-PB-e12" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eQ9-Wj-dmK"/>
                             <constraint firstItem="EJn-ns-3Sv" firstAttribute="top" secondItem="2Jb-eZ-NqH" secondAttribute="bottom" id="miX-hY-zNw"/>
-                            <constraint firstItem="V6u-AT-lRR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="weH-H7-TXN"/>
+                            <constraint firstItem="V6u-AT-lRR" firstAttribute="top" secondItem="Kge-Nh-iGn" secondAttribute="bottom" id="weH-H7-TXN"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="playCollectionView" destination="N1c-8y-mL9" id="iUo-mm-Oye"/>
@@ -315,6 +317,10 @@
         <scene sceneID="QQk-76-AgP">
             <objects>
                 <viewController id="9un-jV-hwY" customClass="ExampleCollectionViewController" customModule="smileCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="doc-lY-RxU"/>
+                        <viewControllerLayoutGuide type="bottom" id="0ok-9L-UoU"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uYx-gE-eX6">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="236"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,7 +374,6 @@
                             <constraint firstAttribute="trailing" secondItem="Mb8-n0-ocv" secondAttribute="trailing" id="meF-De-k0C"/>
                             <constraint firstAttribute="bottom" secondItem="Mb8-n0-ocv" secondAttribute="bottom" id="p3M-sD-UWq"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zlc-JL-RcQ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNh-dc-cIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -377,9 +382,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9645" width="1610" height="2774"/>
         <image name="Background" width="600" height="600"/>
         <image name="denko_normal" width="1201" height="1209"/>
+        <image name="plug" width="495" height="546"/>
         <image name="pool" width="801" height="802"/>
     </resources>
 </document>
