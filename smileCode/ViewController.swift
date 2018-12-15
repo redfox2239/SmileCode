@@ -282,7 +282,6 @@ class ViewController: UIViewController {
         case .show: break
         }
         actionsName.append(action)
-        print(self.actionsName)
         programmingTableViewSetUp()
         programmingManager.startProgramming()
     }
