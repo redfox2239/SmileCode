@@ -47,6 +47,7 @@ extension ViewController {
                 let features = detector?.features(in: ciImage, options: options) as? [CIFaceFeature]
                 if features?.count == 0 || features == nil {
                     smileJudgeLabel.text = "誰もいないよ〜"
+                    execProgramming()
                     return
                 }
                 var isSmileString = "普通の顔"

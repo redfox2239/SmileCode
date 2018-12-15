@@ -120,26 +120,30 @@ class ViewController: UIViewController {
     }
     
     var actionIndex = -1
-    @IBAction func tapBuildButton(_ sender: Any) {
-        programmingManager.state = .none
-        actionIndex = 0
-        let firstIndexPath = IndexPath(row: actionIndex, section: 0)
-        programmingTableView.scrollToRow(at: firstIndexPath, at: .top, animated: true)
-        timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { (ti) in
-            self.programmingTableView.reloadData()
-            if self.actionIndex < self.actionsName.count {
-                let firstIndexPath = IndexPath(row: self.actionIndex, section: 0)
-                self.programmingTableView.scrollToRow(at: firstIndexPath, at: .top, animated: true)
-            }
-            if self.actions.count == self.actionIndex {
-                ti.invalidate()
-                self.actionIndex = -1
-                self.programmingManager.startProgramming()
-            }
-            else {
-                self.actions[self.actionIndex]()
+    func execProgramming() {
+        if actionsName.count > 0 && actions.count > 0 && actionIndex == -1 {
+            programmingManager.state = .none
+            actionIndex = 0
+            let firstIndexPath = IndexPath(row: actionIndex, section: 0)
+            programmingTableView.scrollToRow(at: firstIndexPath, at: .top, animated: true)
+            timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { (ti) in
+                self.programmingTableView.reloadData()
+                if self.actionIndex < self.actionsName.count {
+                    let firstIndexPath = IndexPath(row: self.actionIndex, section: 0)
+                    self.programmingTableView.scrollToRow(at: firstIndexPath, at: .top, animated: true)
+                }
+                if self.actions.count == self.actionIndex {
+                    ti.invalidate()
+                }
+                else {
+                    self.actions[self.actionIndex]()
+                }
             }
         }
+    }
+    
+    @IBAction func tapBuildButton(_ sender: Any) {
+        execProgramming()
     }
     
     @IBAction func tapResetButton(_ sender: Any) {
@@ -314,6 +318,8 @@ class ViewController: UIViewController {
                 }
             }
         }
+        actionIndex = -1
+        programmingManager.startProgramming()
     }
     
     @IBAction func tapMoveRightButton(_ sender: Any) {
