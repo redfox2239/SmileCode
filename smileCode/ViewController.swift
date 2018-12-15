@@ -98,6 +98,23 @@ class ViewController: UIViewController {
             programmingTableView.scrollToRow(at: lastIndexPath, at: .bottom, animated: true)
         }
     }
+
+    func removeActionForLastIndex() {
+        if actionsName.count > 0 && actions.count > 0 {
+            let lastIndex = IndexPath(row: actions.count - 1, section: 0)
+            var newAction = [()->Void]()
+            actions.enumerated().forEach { (index, val) in
+                if index != actions.count - 1 {
+                    newAction.append {
+                        val()
+                    }
+                }
+            }
+            actions = newAction
+            actionsName.removeLast()
+            programmingTableView.deleteRows(at: [lastIndex], with: .fade)
+        }
+    }
     
     @IBAction func tapAddImageButton(_ sender: Any) {
     }

@@ -58,6 +58,7 @@ extension ViewController {
                     if action == nil { programmingManager.startProgramming() }
                     if feature.leftEyeClosed && feature.rightEyeClosed {
                         eyeString = "両目閉じてる"
+                        self.removeActionForLastIndex()
                     }
                     else if feature.leftEyeClosed {
                         eyeString = "左目閉じてる"
