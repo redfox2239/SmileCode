@@ -12,6 +12,7 @@
 		7F09A92121C4E0DA007F69F8 /* DenkoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A92021C4E0DA007F69F8 /* DenkoImageView.swift */; };
 		7F09A92321C50404007F69F8 /* CameraExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A92221C50404007F69F8 /* CameraExtensionViewController.swift */; };
 		7F09A92521C50AEF007F69F8 /* SmileJudgeExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A92421C50AEF007F69F8 /* SmileJudgeExtensionViewController.swift */; };
+		7F09A92721C52838007F69F8 /* ProgrammingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A92621C52838007F69F8 /* ProgrammingManager.swift */; };
 		7F936AE021C3C848007E3ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F936ADF21C3C848007E3ED7 /* AppDelegate.swift */; };
 		7F936AE221C3C848007E3ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F936AE121C3C848007E3ED7 /* ViewController.swift */; };
 		7F936AE521C3C848007E3ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F936AE321C3C848007E3ED7 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		7F09A92021C4E0DA007F69F8 /* DenkoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkoImageView.swift; sourceTree = "<group>"; };
 		7F09A92221C50404007F69F8 /* CameraExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraExtensionViewController.swift; sourceTree = "<group>"; };
 		7F09A92421C50AEF007F69F8 /* SmileJudgeExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmileJudgeExtensionViewController.swift; sourceTree = "<group>"; };
+		7F09A92621C52838007F69F8 /* ProgrammingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingManager.swift; sourceTree = "<group>"; };
 		7F936ADC21C3C848007E3ED7 /* smileCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smileCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F936ADF21C3C848007E3ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F936AE121C3C848007E3ED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				7F09A92021C4E0DA007F69F8 /* DenkoImageView.swift */,
 				7F09A92221C50404007F69F8 /* CameraExtensionViewController.swift */,
 				7F09A92421C50AEF007F69F8 /* SmileJudgeExtensionViewController.swift */,
+				7F09A92621C52838007F69F8 /* ProgrammingManager.swift */,
 			);
 			path = smileCode;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				7F936AE021C3C848007E3ED7 /* AppDelegate.swift in Sources */,
 				7F09A91F21C4D31A007F69F8 /* ExampleCollectionViewCell.swift in Sources */,
 				7F936B0E21C3CD04007E3ED7 /* PalyExtensionViewController.swift in Sources */,
+				7F09A92721C52838007F69F8 /* ProgrammingManager.swift in Sources */,
 				7F9D5F5F21C4B0E2003C2980 /* GoalView.swift in Sources */,
 				7F09A92521C50AEF007F69F8 /* SmileJudgeExtensionViewController.swift in Sources */,
 			);
@@ -482,7 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AppAcademia.smileCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -500,7 +504,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = AppAcademia.smileCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
