@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F09A91D21C4D306007F69F8 /* ExampleCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A91C21C4D306007F69F8 /* ExampleCollectionViewController.swift */; };
 		7F09A91F21C4D31A007F69F8 /* ExampleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A91E21C4D31A007F69F8 /* ExampleCollectionViewCell.swift */; };
+		7F09A92121C4E0DA007F69F8 /* DenkoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F09A92021C4E0DA007F69F8 /* DenkoImageView.swift */; };
 		7F936AE021C3C848007E3ED7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F936ADF21C3C848007E3ED7 /* AppDelegate.swift */; };
 		7F936AE221C3C848007E3ED7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F936AE121C3C848007E3ED7 /* ViewController.swift */; };
 		7F936AE521C3C848007E3ED7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F936AE321C3C848007E3ED7 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		7F09A91C21C4D306007F69F8 /* ExampleCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewController.swift; sourceTree = "<group>"; };
 		7F09A91E21C4D31A007F69F8 /* ExampleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCollectionViewCell.swift; sourceTree = "<group>"; };
+		7F09A92021C4E0DA007F69F8 /* DenkoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DenkoImageView.swift; sourceTree = "<group>"; };
 		7F936ADC21C3C848007E3ED7 /* smileCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smileCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F936ADF21C3C848007E3ED7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F936AE121C3C848007E3ED7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				7F9D5F5E21C4B0E2003C2980 /* GoalView.swift */,
 				7F09A91C21C4D306007F69F8 /* ExampleCollectionViewController.swift */,
 				7F09A91E21C4D31A007F69F8 /* ExampleCollectionViewCell.swift */,
+				7F09A92021C4E0DA007F69F8 /* DenkoImageView.swift */,
 			);
 			path = smileCode;
 			sourceTree = "<group>";
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F09A92121C4E0DA007F69F8 /* DenkoImageView.swift in Sources */,
 				7F936B1821C44183007E3ED7 /* ProgrammingExtensionViewController.swift in Sources */,
 				7F09A91D21C4D306007F69F8 /* ExampleCollectionViewController.swift in Sources */,
 				7F936B1021C3CD50007E3ED7 /* PlayCollectionViewCell.swift in Sources */,

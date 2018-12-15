@@ -11,4 +11,5 @@ import UIKit
 class PlayCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var goalImageView: UIImageView!
     @IBOutlet weak var characterImageView: UIImageView!
+    @IBOutlet weak var poolImageView: UIImageView!
 }
