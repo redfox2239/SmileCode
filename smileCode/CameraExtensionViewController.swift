@@ -47,7 +47,7 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
     
     func setupPreviewLayer() {
         self.cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
         changeOrientation()
         self.cameraPreviewLayer?.frame = cameraView.bounds
         self.cameraView.layer.insertSublayer(self.cameraPreviewLayer!, at: 0)
