@@ -50,6 +50,7 @@ extension ViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
         self.cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspect
         changeOrientation()
         self.cameraPreviewLayer?.frame = cameraView.bounds
+        print(cameraView.bounds)
         self.cameraView.layer.insertSublayer(self.cameraPreviewLayer!, at: 0)
     }
 

@@ -151,21 +151,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KK7-PB-e12" userLabel="MenuView">
                                 <rect key="frame" x="512" y="0.0" width="512" height="77"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ix-OR-g7J">
-                                        <rect key="frame" x="8" y="23.5" width="62" height="30"/>
-                                        <state key="normal" title="＋がぞう"/>
-                                        <connections>
-                                            <action selector="tapAddImageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dt9-3m-5dU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHg-8c-aBU">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PHg-8c-aBU">
                                         <rect key="frame" x="442" y="23.5" width="62" height="30"/>
                                         <state key="normal" title="じっこう"/>
                                         <connections>
                                             <action selector="tapBuildButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OaB-tB-tt4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7X-d9-SxZ">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7X-d9-SxZ">
                                         <rect key="frame" x="372" y="23.5" width="62" height="30"/>
                                         <state key="normal" title="リセット"/>
                                         <connections>
@@ -173,65 +166,63 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98328930140000004" green="0.3976572793" blue="0.2662475084" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="e7X-d9-SxZ" firstAttribute="centerY" secondItem="PHg-8c-aBU" secondAttribute="centerY" id="K7w-of-gcl"/>
                                     <constraint firstAttribute="trailing" secondItem="PHg-8c-aBU" secondAttribute="trailing" constant="8" id="OIZ-eu-U7T"/>
                                     <constraint firstItem="PHg-8c-aBU" firstAttribute="leading" secondItem="e7X-d9-SxZ" secondAttribute="trailing" constant="8" id="TG5-Zm-NUa"/>
-                                    <constraint firstItem="8Ix-OR-g7J" firstAttribute="centerY" secondItem="KK7-PB-e12" secondAttribute="centerY" id="U2n-Xz-PPV"/>
-                                    <constraint firstItem="8Ix-OR-g7J" firstAttribute="leading" secondItem="KK7-PB-e12" secondAttribute="leading" constant="8" id="eu9-ak-2Ef"/>
                                     <constraint firstItem="PHg-8c-aBU" firstAttribute="centerY" secondItem="KK7-PB-e12" secondAttribute="centerY" id="xMd-34-yk7"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Jb-eZ-NqH" userLabel="CameraView">
-                                <rect key="frame" x="512" y="77" width="512" height="455"/>
+                                <rect key="frame" x="512" y="0.0" width="512" height="432"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulm-ps-4n6">
-                                        <rect key="frame" x="8" y="16" width="62" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulm-ps-4n6">
+                                        <rect key="frame" x="8" y="200" width="62" height="30"/>
                                         <state key="normal" title="右に動く"/>
                                         <connections>
                                             <action selector="tapMoveRightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTt-mc-4K4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieg-QJ-QA0">
-                                        <rect key="frame" x="8" y="54" width="62" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieg-QJ-QA0">
+                                        <rect key="frame" x="8" y="238" width="62" height="30"/>
                                         <state key="normal" title="かくす"/>
                                         <connections>
                                             <action selector="tapHideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0T-b0-Kvx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjn-iQ-CAx">
-                                        <rect key="frame" x="78" y="16" width="62" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjn-iQ-CAx">
+                                        <rect key="frame" x="78" y="200" width="62" height="30"/>
                                         <state key="normal" title="左に動く"/>
                                         <connections>
                                             <action selector="tapMoveLeftButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WFP-Mk-yAR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-6Y-ccT">
-                                        <rect key="frame" x="148" y="16" width="62" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-6Y-ccT">
+                                        <rect key="frame" x="148" y="200" width="62" height="30"/>
                                         <state key="normal" title="上に動く"/>
                                         <connections>
                                             <action selector="tapMoveUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2OH-S7-wUs"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRY-pS-Jzf">
-                                        <rect key="frame" x="218" y="16" width="62" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRY-pS-Jzf">
+                                        <rect key="frame" x="218" y="200" width="62" height="30"/>
                                         <state key="normal" title="下に動く"/>
                                         <connections>
                                             <action selector="tapMoveDownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QWw-xP-amx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-J4-gH3">
-                                        <rect key="frame" x="78" y="54" width="62" height="30"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntE-J4-gH3">
+                                        <rect key="frame" x="78" y="238" width="62" height="30"/>
                                         <state key="normal" title="表示する"/>
                                         <connections>
                                             <action selector="tapShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQw-u7-hfw"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-YJ-aQs" userLabel="笑顔判定">
-                                        <rect key="frame" x="8" y="447" width="496" height="0.0"/>
+                                        <rect key="frame" x="8" y="424" width="496" height="0.0"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="73"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" red="0.98328930140000004" green="0.06293003573" blue="0.029012481289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -251,17 +242,17 @@
                                     <constraint firstAttribute="bottom" secondItem="AL9-YJ-aQs" secondAttribute="bottom" constant="8" id="JSN-Do-lKu"/>
                                     <constraint firstItem="ntE-J4-gH3" firstAttribute="centerY" secondItem="ieg-QJ-QA0" secondAttribute="centerY" id="QNt-FV-LrY"/>
                                     <constraint firstItem="FRY-pS-Jzf" firstAttribute="leading" secondItem="DLp-6Y-ccT" secondAttribute="trailing" constant="8" id="Y2U-ea-vO4"/>
-                                    <constraint firstItem="Ulm-ps-4n6" firstAttribute="top" secondItem="2Jb-eZ-NqH" secondAttribute="top" constant="16" id="lCk-he-DBb"/>
+                                    <constraint firstItem="Ulm-ps-4n6" firstAttribute="top" secondItem="2Jb-eZ-NqH" secondAttribute="top" constant="200" id="lCk-he-DBb"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="centerY" secondItem="FRY-pS-Jzf" secondAttribute="centerY" id="nsl-54-Fza"/>
                                     <constraint firstItem="ieg-QJ-QA0" firstAttribute="leading" secondItem="Ulm-ps-4n6" secondAttribute="leading" id="tTJ-8t-TL5"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="centerY" secondItem="DLp-6Y-ccT" secondAttribute="centerY" id="xRg-Ox-OB6"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJn-ns-3Sv" userLabel="ProgrammingView">
-                                <rect key="frame" x="512" y="532" width="512" height="236"/>
+                                <rect key="frame" x="512" y="432" width="512" height="336"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="919-gY-PwH">
-                                        <rect key="frame" x="0.0" y="0.0" width="512" height="236"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="512" height="336"/>
                                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="98" id="9P7-Jb-dcE">
@@ -279,7 +270,6 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.10473037714686452" green="0.22633203183333883" blue="0.069053058412782975" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="919-gY-PwH" firstAttribute="leading" secondItem="EJn-ns-3Sv" secondAttribute="leading" id="OCW-0W-FKc"/>
                                     <constraint firstItem="919-gY-PwH" firstAttribute="top" secondItem="EJn-ns-3Sv" secondAttribute="top" id="gh4-xf-8kn"/>
@@ -291,19 +281,19 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="EJn-ns-3Sv" firstAttribute="leading" secondItem="4TW-9L-W9K" secondAttribute="trailing" id="1Ez-rO-3m5"/>
-                            <constraint firstItem="2Jb-eZ-NqH" firstAttribute="top" secondItem="KK7-PB-e12" secondAttribute="bottom" id="41m-Cu-LSu"/>
                             <constraint firstItem="4TW-9L-W9K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7hF-0E-IJc"/>
                             <constraint firstItem="Gy0-7z-uDB" firstAttribute="top" secondItem="EJn-ns-3Sv" secondAttribute="bottom" id="8GL-2t-boS"/>
                             <constraint firstItem="KK7-PB-e12" firstAttribute="leading" secondItem="V6u-AT-lRR" secondAttribute="trailing" id="8Yf-jk-dv8"/>
                             <constraint firstAttribute="trailing" secondItem="2Jb-eZ-NqH" secondAttribute="trailing" id="JT3-7h-ocP"/>
                             <constraint firstItem="KK7-PB-e12" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="Kw8-pN-XxN"/>
+                            <constraint firstItem="2Jb-eZ-NqH" firstAttribute="top" secondItem="KK7-PB-e12" secondAttribute="top" id="QW2-sY-NZ3"/>
                             <constraint firstItem="Gy0-7z-uDB" firstAttribute="top" secondItem="4TW-9L-W9K" secondAttribute="bottom" id="S7J-VS-O5u"/>
                             <constraint firstItem="2Jb-eZ-NqH" firstAttribute="leading" secondItem="V6u-AT-lRR" secondAttribute="trailing" id="V0T-Ky-gSp"/>
                             <constraint firstAttribute="trailing" secondItem="EJn-ns-3Sv" secondAttribute="trailing" id="VO3-b3-QX9"/>
                             <constraint firstItem="V6u-AT-lRR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="W5O-L9-HZF"/>
                             <constraint firstItem="V6u-AT-lRR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XD4-yk-TnP"/>
                             <constraint firstItem="4TW-9L-W9K" firstAttribute="top" secondItem="V6u-AT-lRR" secondAttribute="bottom" id="XDl-4j-hos"/>
-                            <constraint firstItem="2Jb-eZ-NqH" firstAttribute="bottom" secondItem="V6u-AT-lRR" secondAttribute="bottom" id="XcW-kM-4kE"/>
+                            <constraint firstItem="2Jb-eZ-NqH" firstAttribute="bottom" secondItem="V6u-AT-lRR" secondAttribute="bottom" constant="-100" id="XcW-kM-4kE"/>
                             <constraint firstItem="4TW-9L-W9K" firstAttribute="trailing" secondItem="V6u-AT-lRR" secondAttribute="trailing" id="clc-v9-ybF"/>
                             <constraint firstAttribute="trailing" secondItem="KK7-PB-e12" secondAttribute="trailing" id="e8P-9p-0TF"/>
                             <constraint firstItem="KK7-PB-e12" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eQ9-Wj-dmK"/>
