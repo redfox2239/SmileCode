@@ -16,15 +16,11 @@ class ViewController: UIViewController {
     var characterPositionIndex = IndexPath(row: 0, section: 0)
     var goalPositionIndex = IndexPath(row: 0, section: 0)
     
-    @IBOutlet weak var actionPickerView: UIPickerView!
     var actions = [()->Void]()
     enum actionName: String {
         case moveRight = "右に動く", moveLeft = "左に動く", moveUp = "上に動く", moveDown = "下に動く", hide = "かくす", show = "表示する"
     }
     var actionsName = [actionName]()
-    var funcName = [
-        "さいしょどうする？",
-    ]
     
     let speed = TimeInterval(0.25)
     var isMoveFlag = false
@@ -38,7 +34,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         collectionViewSetUp()
-        pickerViewSetUp()
         programmingTableViewSetUp()
     }
     
@@ -55,10 +50,6 @@ class ViewController: UIViewController {
         characterPositionIndex = IndexPath(row: Int(characterRandom), section: 0)
         cellSize = UIScreen.main.bounds.size.width*0.5 / cellNumber
         playCollectionView.reloadData()
-    }
-    
-    func pickerViewSetUp() {
-        actionPickerView.reloadAllComponents()
     }
     
     func programmingTableViewSetUp() {
@@ -99,7 +90,6 @@ class ViewController: UIViewController {
         actions = [()->Void]()
         actionsName = [actionName]()
         collectionViewSetUp()
-        pickerViewSetUp()
         programmingTableViewSetUp()
     }
     
@@ -179,7 +169,7 @@ class ViewController: UIViewController {
     
     var goalWindow: UIWindow? = nil
     fileprivate func showGoalWindow() {
-        goalWindow = UIWindow(frame: UIScreen.main.bounds)
+        goalWindow = UIWindow()
         goalWindow?.backgroundColor = UIColor.black
         goalWindow?.alpha = 0.5
         goalWindow?.makeKeyAndVisible()
