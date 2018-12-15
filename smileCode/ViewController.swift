@@ -11,6 +11,21 @@ import AVFoundation
 
 enum actionName: String {
     case moveRight = "右に動く", moveLeft = "左に動く", moveUp = "上に動く", moveDown = "下に動く", hide = "かくす", show = "表示する"
+    
+    func getImageName() -> String {
+        switch self {
+        case .moveRight:
+            return "face_right"
+        case .moveLeft:
+            return "face_left"
+        case .moveUp:
+            return "face_up"
+        case .moveDown:
+            return "face_down"
+        default:
+            return ""
+        }
+    }
 }
 
 class ViewController: UIViewController {
