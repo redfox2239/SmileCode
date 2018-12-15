@@ -17,11 +17,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PlayCollectionViewCell", for: indexPath) as! PlayCollectionViewCell
         cell.characterImageView.isHidden = true
         cell.goalImageView.isHidden = true
+        cell.poolImageView.isHidden = true
         if indexPath == characterPositionIndex {
             cell.characterImageView.isHidden = isHidden
         }
         else if indexPath == goalPositionIndex {
             cell.goalImageView.isHidden = false
+        }
+        else if indexPath == poolPositionIndex {
+            cell.poolImageView.isHidden = false
         }
         return cell
     }

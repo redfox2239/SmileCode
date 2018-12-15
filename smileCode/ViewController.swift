@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var cellSize = CGFloat(0)
     var characterPositionIndex = IndexPath(row: 0, section: 0)
     var goalPositionIndex = IndexPath(row: 0, section: 0)
+    var poolPositionIndex = IndexPath(row: 0, section: 0)
     
     var actions = [()->Void]()
     enum actionName: String {
@@ -40,14 +41,22 @@ class ViewController: UIViewController {
     func collectionViewSetUp() {
         let characterRandom = arc4random() % UInt32(cellNumber * cellNumber)
         var goalRandom = arc4random() % UInt32(cellNumber * cellNumber)
+        var poolRandom = arc4random() % UInt32(cellNumber * cellNumber)
         while true {
             if characterRandom != goalRandom {
                 break
             }
             goalRandom = arc4random() % UInt32(cellNumber * cellNumber)
         }
+        while true {
+            if poolRandom != goalRandom && poolRandom != characterRandom {
+                break
+            }
+            poolRandom = arc4random() % UInt32(cellNumber * cellNumber)
+        }
         goalPositionIndex = IndexPath(row: Int(goalRandom), section: 0)
         characterPositionIndex = IndexPath(row: Int(characterRandom), section: 0)
+        poolPositionIndex = IndexPath(row: Int(poolRandom), section: 0)
         cellSize = UIScreen.main.bounds.size.width*0.5 / cellNumber
         playCollectionView.reloadData()
     }
@@ -123,7 +132,7 @@ class ViewController: UIViewController {
                 self.isMoveFlag = false
                 self.actionIndex += 1
                 if self.actionIndex == self.actionsName.count {
-                    self.showGoalWindow()
+                    self.showGoalOrFailWindow()
                 }
                 return
             }
@@ -142,8 +151,13 @@ class ViewController: UIViewController {
                 self.playCollectionView.reloadData()
                 self.isMoveFlag = false
                 self.actionIndex += 1
+                if self.characterPositionIndex == self.poolPositionIndex {
+                    self.showPoolFailWindow()
+                    self.timer.invalidate()
+                    self.actionIndex = -1
+                }
                 if self.actionIndex == self.actionsName.count {
-                    self.showGoalWindow()
+                    self.showGoalOrFailWindow()
                 }
             }
         }
@@ -151,7 +165,7 @@ class ViewController: UIViewController {
             self.isMoveFlag = false
             self.actionIndex += 1
             if self.actionIndex == self.actionsName.count {
-                self.showGoalWindow()
+                self.showGoalOrFailWindow()
             }
         }
     }
@@ -173,7 +187,7 @@ class ViewController: UIViewController {
     }
     
     var goalWindow: UIWindow? = nil
-    fileprivate func showGoalWindow() {
+    fileprivate func showGoalOrFailWindow() {
         goalWindow = UIWindow()
         goalWindow?.backgroundColor = UIColor.clear
         let view = UIView(frame: UIScreen.main.bounds)
@@ -192,6 +206,24 @@ class ViewController: UIViewController {
             else {
                 goalView.changeGoalImage()
             }
+            goalWindow?.addSubview(goalView)
+        }
+    }
+    
+    fileprivate func showPoolFailWindow() {
+        goalWindow = UIWindow()
+        goalWindow?.backgroundColor = UIColor.clear
+        let view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = UIColor.black
+        view.alpha = 0.5
+        goalWindow?.addSubview(view)
+        goalWindow?.makeKeyAndVisible()
+        let tapGestureRec = UITapGestureRecognizer(target: self, action: #selector(ViewController.touchGoalWindow(_:)))
+        goalWindow?.addGestureRecognizer(tapGestureRec)
+        let goalViewXib = UINib(nibName: "GoalView", bundle: nil)
+        if let goalView = goalViewXib.instantiate(withOwner: self, options: nil).first as? GoalView {
+            goalView.frame = UIScreen.main.bounds
+            goalView.changeFailImage()
             goalWindow?.addSubview(goalView)
         }
     }

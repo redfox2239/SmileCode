@@ -72,6 +72,9 @@
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9645" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-yg-dxz" userLabel="goalImageView">
                                                             <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
                                                         </imageView>
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-EQ-0jV">
+                                                            <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
+                                                        </imageView>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="denko_normal" translatesAutoresizingMaskIntoConstraints="NO" id="5dm-Er-svC" userLabel="characterImageView" customClass="DenkoImageView" customModule="smileCode" customModuleProvider="target">
                                                             <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
                                                         </imageView>
@@ -81,27 +84,32 @@
                                                     <constraint firstItem="5dm-Er-svC" firstAttribute="width" secondItem="F8c-Uk-8sK" secondAttribute="width" multiplier="0.7" id="2TJ-3F-K0F"/>
                                                     <constraint firstItem="EUP-yg-dxz" firstAttribute="height" secondItem="F8c-Uk-8sK" secondAttribute="height" multiplier="0.7" id="3Fh-yI-hUA"/>
                                                     <constraint firstAttribute="bottom" secondItem="3AD-N7-V1B" secondAttribute="bottom" id="3oR-zW-e0z"/>
+                                                    <constraint firstItem="GNh-EQ-0jV" firstAttribute="width" secondItem="F8c-Uk-8sK" secondAttribute="width" multiplier="0.7" id="5k2-BI-5yq"/>
                                                     <constraint firstItem="5dm-Er-svC" firstAttribute="centerY" secondItem="F8c-Uk-8sK" secondAttribute="centerY" id="8o5-UM-8cY"/>
                                                     <constraint firstItem="zSG-pC-T0S" firstAttribute="leading" secondItem="LIW-eI-hxg" secondAttribute="trailing" id="AI5-SV-5Ap"/>
                                                     <constraint firstItem="3AD-N7-V1B" firstAttribute="leading" secondItem="F8c-Uk-8sK" secondAttribute="leading" id="AdE-l7-nsa"/>
                                                     <constraint firstAttribute="trailing" secondItem="zSG-pC-T0S" secondAttribute="trailing" id="DKs-Qf-wC4"/>
                                                     <constraint firstItem="EUP-yg-dxz" firstAttribute="width" secondItem="F8c-Uk-8sK" secondAttribute="width" multiplier="0.7" id="Emm-ta-E8d"/>
                                                     <constraint firstItem="5dm-Er-svC" firstAttribute="centerX" secondItem="F8c-Uk-8sK" secondAttribute="centerX" id="NCH-L8-0NH"/>
+                                                    <constraint firstItem="GNh-EQ-0jV" firstAttribute="height" secondItem="F8c-Uk-8sK" secondAttribute="height" multiplier="0.7" id="QDA-NF-oJS"/>
                                                     <constraint firstAttribute="bottom" secondItem="zSG-pC-T0S" secondAttribute="bottom" id="a7f-L7-amy"/>
                                                     <constraint firstItem="3AD-N7-V1B" firstAttribute="top" secondItem="F8c-Uk-8sK" secondAttribute="top" id="fog-MK-BUa"/>
                                                     <constraint firstItem="EdM-82-34L" firstAttribute="top" secondItem="F8c-Uk-8sK" secondAttribute="top" id="i1S-5p-wZL"/>
+                                                    <constraint firstItem="GNh-EQ-0jV" firstAttribute="centerX" secondItem="F8c-Uk-8sK" secondAttribute="centerX" id="iW2-f9-uYk"/>
                                                     <constraint firstItem="EdM-82-34L" firstAttribute="leading" secondItem="3AD-N7-V1B" secondAttribute="trailing" id="jHX-Hf-6To"/>
                                                     <constraint firstAttribute="trailing" secondItem="EdM-82-34L" secondAttribute="trailing" id="kuA-yu-NUI"/>
                                                     <constraint firstItem="zSG-pC-T0S" firstAttribute="top" secondItem="EdM-82-34L" secondAttribute="bottom" id="l5P-d9-Pzb"/>
                                                     <constraint firstAttribute="bottom" secondItem="LIW-eI-hxg" secondAttribute="bottom" id="mFw-lO-4of"/>
                                                     <constraint firstItem="EUP-yg-dxz" firstAttribute="centerX" secondItem="F8c-Uk-8sK" secondAttribute="centerX" id="s1s-Pd-o1V"/>
                                                     <constraint firstItem="LIW-eI-hxg" firstAttribute="leading" secondItem="3AD-N7-V1B" secondAttribute="trailing" id="tJg-am-tft"/>
+                                                    <constraint firstItem="GNh-EQ-0jV" firstAttribute="centerY" secondItem="F8c-Uk-8sK" secondAttribute="centerY" id="vcr-H9-TVV"/>
                                                     <constraint firstItem="EUP-yg-dxz" firstAttribute="centerY" secondItem="F8c-Uk-8sK" secondAttribute="centerY" id="wfr-xB-AJF"/>
                                                     <constraint firstItem="5dm-Er-svC" firstAttribute="height" secondItem="F8c-Uk-8sK" secondAttribute="height" multiplier="0.7" id="yVS-Xl-Bsk"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="characterImageView" destination="5dm-Er-svC" id="82G-Q1-OHE"/>
                                                     <outlet property="goalImageView" destination="EUP-yg-dxz" id="E1G-Bd-pzn"/>
+                                                    <outlet property="poolImageView" destination="GNh-EQ-0jV" id="hPs-r5-NKM"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>
@@ -372,5 +380,6 @@
         <image name="9645" width="1610" height="2774"/>
         <image name="Background" width="600" height="600"/>
         <image name="denko_normal" width="1201" height="1209"/>
+        <image name="pool" width="801" height="802"/>
     </resources>
 </document>
