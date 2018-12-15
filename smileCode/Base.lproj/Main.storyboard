@@ -221,7 +221,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_normal" translatesAutoresizingMaskIntoConstraints="NO" id="rOp-uv-98I">
-                                        <rect key="frame" x="156" y="166" width="200" height="200"/>
+                                        <rect key="frame" x="233" y="166" width="200" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="mYJ-5S-MKn"/>
                                             <constraint firstAttribute="height" constant="200" id="qnG-1b-5sX"/>
@@ -278,7 +278,7 @@
                                     <constraint firstItem="FRY-pS-Jzf" firstAttribute="leading" secondItem="DLp-6Y-ccT" secondAttribute="trailing" constant="8" id="Y2U-ea-vO4"/>
                                     <constraint firstAttribute="bottom" secondItem="lPX-dN-5EW" secondAttribute="bottom" constant="8" id="aFz-fU-ft9"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="top" secondItem="2Jb-eZ-NqH" secondAttribute="top" constant="200" id="lCk-he-DBb"/>
-                                    <constraint firstItem="rOp-uv-98I" firstAttribute="centerX" secondItem="2Jb-eZ-NqH" secondAttribute="centerX" id="mqh-jw-IFb"/>
+                                    <constraint firstItem="rOp-uv-98I" firstAttribute="centerX" secondItem="2Jb-eZ-NqH" secondAttribute="centerX" multiplier="1.3" id="mqh-jw-IFb"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="centerY" secondItem="FRY-pS-Jzf" secondAttribute="centerY" id="nsl-54-Fza"/>
                                     <constraint firstItem="ieg-QJ-QA0" firstAttribute="leading" secondItem="Ulm-ps-4n6" secondAttribute="leading" id="tTJ-8t-TL5"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="centerY" secondItem="DLp-6Y-ccT" secondAttribute="centerY" id="xRg-Ox-OB6"/>
