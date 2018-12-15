@@ -72,7 +72,7 @@
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9645" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-yg-dxz" userLabel="goalImageView">
                                                             <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
                                                         </imageView>
-                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="denko" translatesAutoresizingMaskIntoConstraints="NO" id="5dm-Er-svC" userLabel="characterImageView">
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="denko_normal" translatesAutoresizingMaskIntoConstraints="NO" id="5dm-Er-svC" userLabel="characterImageView">
                                                             <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
                                                         </imageView>
                                                     </subviews>
@@ -360,6 +360,7 @@
                             <constraint firstAttribute="trailing" secondItem="Mb8-n0-ocv" secondAttribute="trailing" id="meF-De-k0C"/>
                             <constraint firstAttribute="bottom" secondItem="Mb8-n0-ocv" secondAttribute="bottom" id="p3M-sD-UWq"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="zlc-JL-RcQ"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aNh-dc-cIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -369,7 +370,7 @@
     </scenes>
     <resources>
         <image name="9645" width="1610" height="2774"/>
-        <image name="denko" width="88" height="102"/>
+        <image name="denko_normal" width="1201" height="1209"/>
         <image name="背景" width="256" height="207"/>
     </resources>
 </document>

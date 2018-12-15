@@ -128,7 +128,7 @@ class ViewController: UIViewController {
             isMoveFlag = true
             cell.characterImageView.isHidden = true
             let imageView = UIImageView(frame: CGRect(x: point.x, y: point.y, width: size, height: size))
-            imageView.image = UIImage(named: "denko")
+            imageView.image = UIImage(named: "denko_normal")
             imageView.contentMode = .scaleAspectFit
             self.view.addSubview(imageView)
             UIView.animate(withDuration: speed, animations: {
