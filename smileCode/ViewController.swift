@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -30,9 +31,26 @@ class ViewController: UIViewController {
     
     var timer: Timer!
     
+    @IBOutlet weak var cameraView: UIView!
+    var mainCamera: AVCaptureDevice?
+    var innerCamera: AVCaptureDevice?
+    var currentDevice: AVCaptureDevice?
+    var captureSession = AVCaptureSession()
+    var photoOutput: AVCapturePhotoOutput?
+    var videoOutput: AVCaptureVideoDataOutput?
+    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
+    var previewciImage: CIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onOrientationDidChange(_:)), name: UIDevice.orientationDidChangeNotification, object: nil)
+
+        setupCaptureSession()
+        setupDevice()
+        setupVideoInputOutput()
+        setupPreviewLayer()
+        captureSession.startRunning()
         
         collectionViewSetUp()
         programmingTableViewSetUp()

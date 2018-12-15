@@ -305,6 +305,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cameraView" destination="2Jb-eZ-NqH" id="C5V-7t-gXV"/>
                         <outlet property="playCollectionView" destination="N1c-8y-mL9" id="iUo-mm-Oye"/>
                         <outlet property="programmingTableView" destination="919-gY-PwH" id="bVS-HR-XP3"/>
                     </connections>
