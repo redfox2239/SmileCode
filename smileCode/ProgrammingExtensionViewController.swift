@@ -22,12 +22,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = actionsName[indexPath.row].rawValue
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ActionTableViewCell
+        let imgStr = actionsName[indexPath.row].getImageName()
+        cell.actionImageView.image = UIImage(named: imgStr)
         cell.backgroundColor = .white
         if indexPath.row == actionIndex {
             cell.backgroundColor = UIColor.blue
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UIScreen.main.bounds.size.height * 0.1
+    }
+    
 }
