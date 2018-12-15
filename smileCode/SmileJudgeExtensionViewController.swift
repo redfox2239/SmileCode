@@ -21,11 +21,12 @@ extension ViewController {
         let options = [
             CIDetectorSmile: true,
             CIDetectorEyeBlink: true,
-            ]
-        print(UIApplication.shared.statusBarOrientation.rawValue)
-        print(UIImage.Orientation.leftMirrored.rawValue)
-        print(UIImage.Orientation.rightMirrored.rawValue)
-        let image = UIImage(ciImage: previewciImage!, scale: 1.0, orientation: UIImage.Orientation.downMirrored)
+        ]
+        var imgOrientation = UIImage.Orientation.upMirrored
+        if UIApplication.shared.statusBarOrientation != .landscapeLeft {
+            imgOrientation = UIImage.Orientation.downMirrored
+        }
+        let image = UIImage(ciImage: previewciImage!, scale: 1.0, orientation: imgOrientation)
         UIGraphicsBeginImageContext(image.size)
         image.draw(at: CGPoint(x: 0, y: 0))
         if let img = UIGraphicsGetImageFromCurrentImageContext() {
