@@ -46,7 +46,10 @@ class ViewController: UIViewController {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var previewciImage: CIImage?
     
-    @IBOutlet weak var smileJudgeLabel: UILabel!
+    @IBOutlet weak var faceImageView: UIImageView!
+    @IBOutlet weak var faceDirectionImageView: UIImageView!
+    @IBOutlet weak var faceEyeImageView: UIImageView!
+    
     let faceLimitAngle = Float(15)
     
     override func viewDidLoad() {

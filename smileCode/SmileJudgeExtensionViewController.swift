@@ -46,30 +46,23 @@ extension ViewController {
                 let ciImage = CIImage(cgImage: cgImage)
                 let features = detector?.features(in: ciImage, options: options) as? [CIFaceFeature]
                 if features?.count == 0 || features == nil {
-                    smileJudgeLabel.text = "誰もいないよ〜"
                     execProgramming()
                     return
                 }
-                var isSmileString = "普通の顔"
-                var directionString = ""
-                var eyeString = ""
+                faceImageView.image = nil
+                faceDirectionImageView.image = nil
+                faceEyeImageView.image = nil
+                
                 features?.forEach({ (feature) in
                     let action = programmingManager.programming(feature: feature)
                     programmingManager.insertProgramming()
                     if action == nil { programmingManager.startProgramming() }
                     if feature.leftEyeClosed && feature.rightEyeClosed {
-                        eyeString = "両目閉じてる"
+                        self.faceEyeImageView.image = UIImage(named: "face_blink")
                         self.removeActionForLastIndex()
                     }
-                    else if feature.leftEyeClosed {
-                        eyeString = "左目閉じてる"
-                    }
-                    else if feature.rightEyeClosed {
-                        eyeString = "右目閉じてる"
-                    }
-                    
                     if feature.hasSmile {
-                        isSmileString = "笑顔"
+                        self.faceImageView.image = UIImage(named: "face_smile")
                         if programmingManager.canCommitProgramming() && !programmingManager.commitingProgramming() {
                             programmingManager.startCommitting()
                             if let a = action {
@@ -78,16 +71,21 @@ extension ViewController {
                         }
                     }
                     else {
-                        isSmileString = "普通の顔"
+                        self.faceImageView.image = UIImage(named: "face_normal")
                     }
                     if feature.faceAngle < Float(-1)*faceLimitAngle {
-                        directionString = "左向ている"
+                        self.faceDirectionImageView.image = UIImage(named: "face_left")
                     }
-                    if feature.faceAngle > faceLimitAngle {
-                        directionString = "右向いてる"
+                    else if feature.faceAngle > faceLimitAngle {
+                        self.faceDirectionImageView.image = UIImage(named: "face_right")
+                    }
+                    else if feature.rightEyeClosed {
+                        self.faceEyeImageView.image = UIImage(named: "face_up")
+                    }
+                    else if feature.leftEyeClosed {
+                        self.faceEyeImageView.image = UIImage(named: "face_down")
                     }
                 })
-                smileJudgeLabel.text = eyeString + ", " + isSmileString + ", " + directionString
             }
         }
     }
