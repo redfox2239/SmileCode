@@ -116,9 +116,6 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func tapAddImageButton(_ sender: Any) {
-    }
-    
     var actionIndex = -1
     func execProgramming() {
         if actionsName.count > 0 && actions.count > 0 && actionIndex == -1 {
@@ -146,13 +143,17 @@ class ViewController: UIViewController {
         execProgramming()
     }
     
-    @IBAction func tapResetButton(_ sender: Any) {
+    fileprivate func reset() {
         timer.invalidate()
         actionIndex = -1
         actions = [()->Void]()
         actionsName = [actionName]()
         collectionViewSetUp()
         programmingTableViewSetUp()
+    }
+    
+    @IBAction func tapResetButton(_ sender: Any) {
+        reset()
     }
     
     enum moveType {
@@ -318,7 +319,7 @@ class ViewController: UIViewController {
                 }
             }
         }
-        actionIndex = -1
+        reset()
         programmingManager.startProgramming()
     }
     
