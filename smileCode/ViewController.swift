@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     var previewciImage: CIImage?
     
+    @IBOutlet weak var smileJudgeLabel: UILabel!
+    let faceLimitAngle = Float(15)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +57,8 @@ class ViewController: UIViewController {
         
         collectionViewSetUp()
         programmingTableViewSetUp()
+        
+        startJudge()
     }
     
     func collectionViewSetUp() {

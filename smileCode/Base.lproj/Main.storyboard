@@ -231,6 +231,13 @@
                                             <action selector="tapShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQw-u7-hfw"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="AL9-YJ-aQs" userLabel="笑顔判定">
+                                        <rect key="frame" x="8" y="447" width="496" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="73"/>
+                                        <color key="textColor" red="0.98328930140000004" green="0.06293003573" blue="0.029012481289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
@@ -239,9 +246,12 @@
                                     <constraint firstItem="fjn-iQ-CAx" firstAttribute="leading" secondItem="Ulm-ps-4n6" secondAttribute="trailing" constant="8" id="4g8-9l-6xV"/>
                                     <constraint firstItem="ntE-J4-gH3" firstAttribute="leading" secondItem="ieg-QJ-QA0" secondAttribute="trailing" constant="8" id="8AY-fV-TzC"/>
                                     <constraint firstItem="ieg-QJ-QA0" firstAttribute="top" secondItem="Ulm-ps-4n6" secondAttribute="bottom" constant="8" id="8Bx-7H-AKt"/>
+                                    <constraint firstItem="AL9-YJ-aQs" firstAttribute="leading" secondItem="2Jb-eZ-NqH" secondAttribute="leading" constant="8" id="8H8-11-97M"/>
                                     <constraint firstItem="ntE-J4-gH3" firstAttribute="trailing" secondItem="fjn-iQ-CAx" secondAttribute="trailing" id="C0f-Y9-VBj"/>
+                                    <constraint firstAttribute="trailing" secondItem="AL9-YJ-aQs" secondAttribute="trailing" constant="8" id="DeV-LK-uyD"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="centerY" secondItem="fjn-iQ-CAx" secondAttribute="centerY" id="Ipf-SM-ObX"/>
                                     <constraint firstItem="DLp-6Y-ccT" firstAttribute="leading" secondItem="fjn-iQ-CAx" secondAttribute="trailing" constant="8" id="JPI-Wd-Ckx"/>
+                                    <constraint firstAttribute="bottom" secondItem="AL9-YJ-aQs" secondAttribute="bottom" constant="8" id="JSN-Do-lKu"/>
                                     <constraint firstItem="ntE-J4-gH3" firstAttribute="centerY" secondItem="ieg-QJ-QA0" secondAttribute="centerY" id="QNt-FV-LrY"/>
                                     <constraint firstItem="FRY-pS-Jzf" firstAttribute="leading" secondItem="DLp-6Y-ccT" secondAttribute="trailing" constant="8" id="Y2U-ea-vO4"/>
                                     <constraint firstItem="Ulm-ps-4n6" firstAttribute="top" secondItem="2Jb-eZ-NqH" secondAttribute="top" constant="16" id="lCk-he-DBb"/>
@@ -308,6 +318,7 @@
                         <outlet property="cameraView" destination="2Jb-eZ-NqH" id="C5V-7t-gXV"/>
                         <outlet property="playCollectionView" destination="N1c-8y-mL9" id="iUo-mm-Oye"/>
                         <outlet property="programmingTableView" destination="919-gY-PwH" id="bVS-HR-XP3"/>
+                        <outlet property="smileJudgeLabel" destination="AL9-YJ-aQs" id="WC1-ps-JsF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
