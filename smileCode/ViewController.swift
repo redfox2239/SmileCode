@@ -100,7 +100,6 @@ class ViewController: UIViewController {
         if isMoveFlag {
             return
         }
-        print(actionIndex)
         var i = 0
         switch type {
         case .right:
@@ -123,6 +122,9 @@ class ViewController: UIViewController {
             if (Int(dx) > Int(size/0.7) * 2) || (Int(dx) < -Int(size/0.7) * 2) {
                 self.isMoveFlag = false
                 self.actionIndex += 1
+                if self.actionIndex == self.actionsName.count {
+                    self.showGoalWindow()
+                }
                 return
             }
             isMoveFlag = true
@@ -148,6 +150,9 @@ class ViewController: UIViewController {
         else {
             self.isMoveFlag = false
             self.actionIndex += 1
+            if self.actionIndex == self.actionsName.count {
+                self.showGoalWindow()
+            }
         }
     }
     
@@ -170,8 +175,11 @@ class ViewController: UIViewController {
     var goalWindow: UIWindow? = nil
     fileprivate func showGoalWindow() {
         goalWindow = UIWindow()
-        goalWindow?.backgroundColor = UIColor.black
-        goalWindow?.alpha = 0.5
+        goalWindow?.backgroundColor = UIColor.clear
+        let view = UIView(frame: UIScreen.main.bounds)
+        view.backgroundColor = UIColor.black
+        view.alpha = 0.5
+        goalWindow?.addSubview(view)
         goalWindow?.makeKeyAndVisible()
         let tapGestureRec = UITapGestureRecognizer(target: self, action: #selector(ViewController.touchGoalWindow(_:)))
         goalWindow?.addGestureRecognizer(tapGestureRec)
@@ -179,7 +187,10 @@ class ViewController: UIViewController {
         if let goalView = goalViewXib.instantiate(withOwner: self, options: nil).first as? GoalView {
             goalView.frame = UIScreen.main.bounds
             if characterPositionIndex != goalPositionIndex {
-                goalView.goalLabel.text = "残念(´；ω；｀)"
+                goalView.changeFailImage()
+            }
+            else {
+                goalView.changeGoalImage()
             }
             goalWindow?.addSubview(goalView)
         }

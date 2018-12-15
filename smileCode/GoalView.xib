@@ -16,26 +16,27 @@
             <rect key="frame" x="0.0" y="0.0" width="723" height="512"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ゴール" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="yZu-4E-Vxz">
-                    <rect key="frame" x="251.5" y="212" width="220" height="88"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="73"/>
-                    <color key="textColor" red="0.98328930140000004" green="0.06293003573" blue="0.029012481289999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="denko_success" translatesAutoresizingMaskIntoConstraints="NO" id="aiQ-1c-06J">
+                    <rect key="frame" x="181" y="128" width="361.5" height="256"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="yZu-4E-Vxz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vxw-5F-bhJ"/>
-                <constraint firstItem="yZu-4E-Vxz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mhO-MS-TTE"/>
+                <constraint firstItem="aiQ-1c-06J" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="00T-lB-rvm"/>
+                <constraint firstItem="aiQ-1c-06J" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oL7-2x-P1c"/>
+                <constraint firstItem="aiQ-1c-06J" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.5" id="pkn-2A-t3E"/>
+                <constraint firstItem="aiQ-1c-06J" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="xHn-UY-JjE"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="goalLabel" destination="yZu-4E-Vxz" id="KbI-qF-T7s"/>
+                <outlet property="goalImageView" destination="aiQ-1c-06J" id="iOR-Q7-vVo"/>
             </connections>
             <point key="canvasLocation" x="11.328125" y="198.6328125"/>
         </view>
     </objects>
+    <resources>
+        <image name="denko_success" width="1201" height="1209"/>
+    </resources>
 </document>
