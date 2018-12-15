@@ -69,7 +69,7 @@
                                                                 <constraint firstAttribute="height" constant="2" id="zFB-kS-aRC"/>
                                                             </constraints>
                                                         </view>
-                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="9645" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-yg-dxz" userLabel="goalImageView">
+                                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plug" translatesAutoresizingMaskIntoConstraints="NO" id="EUP-yg-dxz" userLabel="goalImageView">
                                                             <rect key="frame" x="12.5" y="12.5" width="58" height="58"/>
                                                         </imageView>
                                                         <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pool" translatesAutoresizingMaskIntoConstraints="NO" id="GNh-EQ-0jV">
@@ -377,9 +377,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9645" width="1610" height="2774"/>
         <image name="Background" width="600" height="600"/>
         <image name="denko_normal" width="1201" height="1209"/>
+        <image name="plug" width="495" height="546"/>
         <image name="pool" width="801" height="802"/>
     </resources>
 </document>
