@@ -9,6 +9,10 @@
 import UIKit
 import AVFoundation
 
+enum actionName: String {
+    case moveRight = "右に動く", moveLeft = "左に動く", moveUp = "上に動く", moveDown = "下に動く", hide = "かくす", show = "表示する"
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var playCollectionView: UICollectionView!
@@ -19,12 +23,13 @@ class ViewController: UIViewController {
     var poolPositionIndex = IndexPath(row: 0, section: 0)
     
     var actions = [()->Void]()
-    enum actionName: String {
-        case moveRight = "右に動く", moveLeft = "左に動く", moveUp = "上に動く", moveDown = "下に動く", hide = "かくす", show = "表示する"
-    }
     var actionsName = [actionName]()
     
+    var programmingManager = ProgrammingManager()
+    
     let speed = TimeInterval(0.25)
+    let timerInterval = TimeInterval(0.3)
+
     var isMoveFlag = false
     
     @IBOutlet weak var programmingTableView: UITableView!
@@ -46,6 +51,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        programmingManager.startProgramming()
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.onOrientationDidChange(_:)), name: UIDevice.orientationDidChangeNotification, object: nil)
 
@@ -97,10 +104,11 @@ class ViewController: UIViewController {
     
     var actionIndex = -1
     @IBAction func tapBuildButton(_ sender: Any) {
+        programmingManager.state = .none
         actionIndex = 0
         let firstIndexPath = IndexPath(row: actionIndex, section: 0)
         programmingTableView.scrollToRow(at: firstIndexPath, at: .top, animated: true)
-        timer = Timer.scheduledTimer(withTimeInterval: speed, repeats: true) { (ti) in
+        timer = Timer.scheduledTimer(withTimeInterval: timerInterval, repeats: true) { (ti) in
             self.programmingTableView.reloadData()
             if self.actionIndex < self.actionsName.count {
                 let firstIndexPath = IndexPath(row: self.actionIndex, section: 0)
@@ -109,6 +117,7 @@ class ViewController: UIViewController {
             if self.actions.count == self.actionIndex {
                 ti.invalidate()
                 self.actionIndex = -1
+                self.programmingManager.startProgramming()
             }
             else {
                 self.actions[self.actionIndex]()
@@ -249,6 +258,33 @@ class ViewController: UIViewController {
             goalView.changeFailImage()
             goalWindow?.addSubview(goalView)
         }
+    }
+    
+    func addAction(_ action: actionName) {
+        switch action {
+        case .moveRight:
+            actions.append {
+                self.move(type: .right)
+            }
+        case .moveLeft:
+            actions.append {
+                self.move(type: .left)
+            }
+        case .moveUp:
+            actions.append {
+                self.move(type: .up)
+            }
+        case .moveDown:
+            actions.append {
+                self.move(type: .down)
+            }
+        case .hide: break
+        case .show: break
+        }
+        actionsName.append(action)
+        print(self.actionsName)
+        programmingTableViewSetUp()
+        programmingManager.startProgramming()
     }
     
     @objc func touchGoalWindow(_ touch: UITapGestureRecognizer) {

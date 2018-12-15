@@ -26,6 +26,9 @@ extension ViewController {
         if UIApplication.shared.statusBarOrientation != .landscapeLeft {
             imgOrientation = UIImage.Orientation.downMirrored
         }
+        if previewciImage == nil {
+            return
+        }
         let image = UIImage(ciImage: previewciImage!, scale: 1.0, orientation: imgOrientation)
         UIGraphicsBeginImageContext(image.size)
         image.draw(at: CGPoint(x: 0, y: 0))
@@ -37,6 +40,9 @@ extension ViewController {
 //            v.frame = rect
 //            self.view.addSubview(v)
             if let cgImage = img.cgImage {
+                if !programmingManager.canProgramming() {
+                    return
+                }
                 let ciImage = CIImage(cgImage: cgImage)
                 let features = detector?.features(in: ciImage, options: options) as? [CIFaceFeature]
                 if features?.count == 0 || features == nil {
@@ -47,9 +53,9 @@ extension ViewController {
                 var directionString = ""
                 var eyeString = ""
                 features?.forEach({ (feature) in
-                    print(feature.bounds)
-                    print(feature.hasSmile)
-                    print(feature.faceAngle)
+                    let action = programmingManager.programming(feature: feature)
+                    programmingManager.insertProgramming()
+                    if action == nil { programmingManager.startProgramming() }
                     if feature.leftEyeClosed && feature.rightEyeClosed {
                         eyeString = "両目閉じてる"
                     }
@@ -62,6 +68,12 @@ extension ViewController {
                     
                     if feature.hasSmile {
                         isSmileString = "笑顔"
+                        if programmingManager.canCommitProgramming() && !programmingManager.commitingProgramming() {
+                            programmingManager.startCommitting()
+                            if let a = action {
+                                self.addAction(a)
+                            }
+                        }
                     }
                     else {
                         isSmileString = "普通の顔"
