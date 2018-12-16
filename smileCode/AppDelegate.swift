@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            let iphoneST = UIStoryboard(name: "iPhoneStoryboard", bundle: nil)
+            let vc = iphoneST.instantiateViewController(withIdentifier: "iPhoneViewController")
+            window?.rootViewController = vc
+        }
+        
         return true
     }
 
