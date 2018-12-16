@@ -41,12 +41,14 @@ extension ViewController {
 //            self.view.addSubview(v)
             if let cgImage = img.cgImage {
                 if !programmingManager.canProgramming() {
+                    UIGraphicsEndImageContext()
                     return
                 }
                 let ciImage = CIImage(cgImage: cgImage)
                 let features = detector?.features(in: ciImage, options: options) as? [CIFaceFeature]
                 if features?.count == 0 || features == nil {
                     execProgramming()
+                    UIGraphicsEndImageContext()
                     return
                 }
                 faceImageView.image = nil
@@ -87,7 +89,7 @@ extension ViewController {
                     }
                 })
             }
-            UIGraphicsEndImageContext()
         }
+        UIGraphicsEndImageContext()
     }
 }
