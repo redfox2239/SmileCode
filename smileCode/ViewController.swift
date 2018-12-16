@@ -105,7 +105,7 @@ class ViewController: UIViewController {
         goalPositionIndex = IndexPath(row: Int(goalRandom), section: 0)
         characterPositionIndex = IndexPath(row: Int(characterRandom), section: 0)
         poolPositionIndex = IndexPath(row: Int(poolRandom), section: 0)
-        cellSize = UIScreen.main.bounds.size.width*0.5 / cellNumber
+        cellSize = UIScreen.main.bounds.size.width*Config.rate / cellNumber
         playCollectionView.reloadData()
     }
     
@@ -196,7 +196,7 @@ class ViewController: UIViewController {
         if let nextCell = playCollectionView.cellForItem(at: nextIndexPath) as? PlayCollectionViewCell {
             let cell = playCollectionView.cellForItem(at: characterPositionIndex) as! PlayCollectionViewCell
             let point = self.view.convert(cell.characterImageView.frame.origin, from: cell)
-            let size = UIScreen.main.bounds.size.width * 0.5 / cellNumber * 0.7
+            let size = UIScreen.main.bounds.size.width * Config.rate / cellNumber * 0.7
             let nextPoint = self.view.convert(nextCell.characterImageView.frame.origin, from: nextCell)
             let dx = nextPoint.x - point.x
             let dy = nextPoint.y - point.y

@@ -39,7 +39,7 @@ extension ExampleCollectionViewController: UICollectionViewDelegate, UICollectio
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = UIScreen.main.bounds.size.width * 0.5 / exampleNumber
+        let size = UIScreen.main.bounds.size.width * Config.rate / exampleNumber
         return CGSize(width: size, height: size)
     }
 }

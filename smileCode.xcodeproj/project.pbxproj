@@ -26,6 +26,8 @@
 		7F936B1821C44183007E3ED7 /* ProgrammingExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F936B1721C44183007E3ED7 /* ProgrammingExtensionViewController.swift */; };
 		7F9D5F5D21C4A837003C2980 /* GoalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F9D5F5C21C4A837003C2980 /* GoalView.xib */; };
 		7F9D5F5F21C4B0E2003C2980 /* GoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9D5F5E21C4B0E2003C2980 /* GoalView.swift */; };
+		7FF0507121C5C9EA004925B5 /* iPhoneStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FF0507021C5C9EA004925B5 /* iPhoneStoryboard.storyboard */; };
+		7FF0507321C5CB7F004925B5 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF0507221C5CB7F004925B5 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		7F936B1721C44183007E3ED7 /* ProgrammingExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgrammingExtensionViewController.swift; sourceTree = "<group>"; };
 		7F9D5F5C21C4A837003C2980 /* GoalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GoalView.xib; sourceTree = "<group>"; };
 		7F9D5F5E21C4B0E2003C2980 /* GoalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalView.swift; sourceTree = "<group>"; };
+		7FF0507021C5C9EA004925B5 /* iPhoneStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = iPhoneStoryboard.storyboard; sourceTree = "<group>"; };
+		7FF0507221C5CB7F004925B5 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				7F09A92421C50AEF007F69F8 /* SmileJudgeExtensionViewController.swift */,
 				7F09A92621C52838007F69F8 /* ProgrammingManager.swift */,
 				7F92C88421C562B800CE10EE /* ActionTableViewCell.swift */,
+				7FF0507021C5C9EA004925B5 /* iPhoneStoryboard.storyboard */,
+				7FF0507221C5CB7F004925B5 /* Config.swift */,
 			);
 			path = smileCode;
 			sourceTree = "<group>";
@@ -267,6 +273,7 @@
 			files = (
 				7F9D5F5D21C4A837003C2980 /* GoalView.xib in Resources */,
 				7F936AEA21C3C849007E3ED7 /* LaunchScreen.storyboard in Resources */,
+				7FF0507121C5C9EA004925B5 /* iPhoneStoryboard.storyboard in Resources */,
 				7F936AE721C3C849007E3ED7 /* Assets.xcassets in Resources */,
 				7F936AE521C3C848007E3ED7 /* Main.storyboard in Resources */,
 			);
@@ -296,6 +303,7 @@
 				7F09A92121C4E0DA007F69F8 /* DenkoImageView.swift in Sources */,
 				7F09A92321C50404007F69F8 /* CameraExtensionViewController.swift in Sources */,
 				7F936B1821C44183007E3ED7 /* ProgrammingExtensionViewController.swift in Sources */,
+				7FF0507321C5CB7F004925B5 /* Config.swift in Sources */,
 				7F09A91D21C4D306007F69F8 /* ExampleCollectionViewController.swift in Sources */,
 				7F936B1021C3CD50007E3ED7 /* PlayCollectionViewCell.swift in Sources */,
 				7F936AE221C3C848007E3ED7 /* ViewController.swift in Sources */,
